@@ -41,6 +41,29 @@ namespace ConsoleApp1
             }
             double Rs = 1 - (6 * sumDifferenceSquard) / (n * (Math.Pow(n, 2) - 1));
             Console.WriteLine($"Коэффицент ранговой корреляции Rs = {Rs}");
+            Console.WriteLine("Характер взаимосвязи по шкале Чеддока:");
+            if (Rs >= 0 && Rs < 0.2)
+            {
+                Console.WriteLine("Связь пректически отсутствует");
+            }
+            else if (Rs >= 0.2 && Rs < 0.5)
+            {
+                Console.WriteLine("Связь слабая");
+            }
+            else if (Rs >= 0.5 && Rs < 0.7)
+            {
+                Console.WriteLine("Связь средняя");
+            }
+            else if (Rs >= 0.7 && Rs < 0.95)
+            {
+                Console.WriteLine("Связь сильная");
+            }
+            else if (Rs >= 0.95 && Rs < 1)
+            {
+                Console.WriteLine("Практически функциональная завипсимость");
+            }
+            Console.WriteLine("Работу выполнил студент: Зохиров Абдурахмон Ахмаджонович");
+            Console.WriteLine("Группа: 34 ИС");
         }
     }
 }
